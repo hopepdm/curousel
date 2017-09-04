@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <style type="text/css">
+        .over {
+            display: none;
+            position: absolute;
+            width:400px;
+            height:400px;              
+        }
+        .layout {
+            display: block;
+            position: absolute;
+            width:400px;
+            height:400px; 
+  		    border:1px solid#000000;         
+        }
+		img.loadingImg {
+		    position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -27px; 
+            margin-left: -27px; 
+		}
+    </style>   
+</head>
+<body>    
+    <!-- 实现image加载动画，水平垂直居中 -->
+    <div id="over" class="over"><img src="http://lorempixel.com/400/400/" alt="" /></div>
+    <div id="layout" class="layout"><img class="loadingImg" src="http://files.jb51.net/file_images/article/201311/2013112931.gif" alt="" /></div>
+</body>
+	<script type="text/javascript">
+        window.onload = function () {
+            document.getElementById("over").style.display = "block";
+            document.getElementById("layout").style.display = "none";
+		}
+    </script>
+</html>
